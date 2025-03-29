@@ -1,0 +1,49 @@
+.navbar {
+  background-color: #f5f4ef; /* Adjust the background color as needed */
+}
+.navbar-brand img {
+  max-height: 40px; /* Adjust logo size */
+}
+.nav-link {
+  font-weight: 200;
+  color: black !important;
+}
+
+/* SCROLL fade up from bottom */
+
+.a-up {
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly below its original position */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth animation */
+}
+
+.a-up.animate {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Return to original position */
+}
+
+/* fade in left */
+
+.a-left {
+  opacity: 0; /* Start invisible */
+  transform: translateX(-20px); /* Start slightly to the left */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.a-left.animate {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Return to original position */
+}
+
+/* fade in right */
+
+.a-right {
+  opacity: 0; /* Start invisible */
+  transform: translateX(20px); /* Start slightly to the right */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.a-right.animate {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Return to original position */
+}
