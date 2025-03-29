@@ -52,7 +52,97 @@
 }
 
 /* about */
+
+.brand-message-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust based on your layout */
+  background-color: #f8f8f8; /* Optional background */
+  padding: 20px;
+}
+
+.text-container {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.static-text {
+  margin-right: 10px;
+}
+
+.rotating-text {
+  position: relative;
+  overflow: hidden;
+  height: 30px; /* Make sure this is large enough */
+  display: block; /* Ensure the container is visible */
+  min-width: 600px;
+
+  line-height: 31px; /* Match this to your font-size */
+}
+
+/* Rotating text element */
+.rotating-text span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure text spans take full width */
+  text-align: left; /* Align text properly */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  white-space: nowrap; /* Prevent text from breaking */
+}
+
+.rotating-text span.active {
+  opacity: 1;
+}
+
 /* portfolio */
 /* services */
+.service-packages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.package h4 {
+  font-size: 17px;
+}
+
+.package h3 {
+  font-size: 14px;
+}
+
+.add-on-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.featured-section {
+  margin-top: 50px;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 30px;
+}
+
+.featured h2 {
+  font-size: 18px;
+}
+
+.featured h3 {
+  font-size: 16px;
+}
+
+.featured h4 {
+  font-size: 15px;
+}
+
 /* contact */
 /* footer */
