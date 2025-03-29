@@ -62,11 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
       whyUs: formData.get("whyUs"),
     };
 
-    fetch("YOUR_WEB_APP_URL_HERE", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    })
+    fetch(
+      "https://script.google.com/a/macros/esensestudio.com/s/AKfycbxlsoyS-OCKBh3CoViLMR8QcVnXbifNqephoT78n36ywaoT4_E3QFOahT15h1_MQCXSYA/exec",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    )
       .then((response) => response.text())
       .then((result) => {
         alert("Form submitted successfully!");
