@@ -65,7 +65,7 @@
 }
 
 .text-container {
-  font-size: 24px;
+  font-size: 15px;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -80,9 +80,9 @@
   overflow: hidden;
   height: 30px; /* Make sure this is large enough */
   display: block; /* Ensure the container is visible */
-  min-width: 600px;
+  min-width: 500px;
 
-  line-height: 31px; /* Match this to your font-size */
+  line-height: 30px; /* Match this to your font-size */
 }
 
 /* Rotating text element */
