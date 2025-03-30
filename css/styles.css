@@ -42,11 +42,9 @@
 /* NAVBAR */
 .navbar {
   background-color: #f5f4ef; /* Adjust the background color as needed */
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 .navbar-brand img {
-  max-height: 40px; /* Adjust logo size */
+  max-height: 120px; /* Adjust logo size */
 }
 .nav-link {
   font-weight: 200;
