@@ -150,3 +150,9 @@
 
 /* contact */
 /* footer */
+footer {
+  background-color: #f5f4ef;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+}
