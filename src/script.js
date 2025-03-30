@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     fetch(
-      "https://script.google.com/a/macros/esensestudio.com/s/AKfycbxlsoyS-OCKBh3CoViLMR8QcVnXbifNqephoT78n36ywaoT4_E3QFOahT15h1_MQCXSYA/exec",
+      "https://script.google.com/macros/s/AKfycbyuGVX4-qEDjsTXuXWuPhZ-wAS_j-PeEkprTiMGcIWaaWpf8gLzQVoXCxT4w-azH3sUfQ/exec",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
