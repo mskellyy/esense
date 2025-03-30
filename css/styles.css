@@ -78,28 +78,28 @@
 .rotating-text {
   position: relative;
   overflow: hidden;
-  height: 30px; /* Make sure this is large enough */
-  display: block; /* Ensure the container is visible */
-  min-width: 500px;
-
-  line-height: 30px; /* Match this to your font-size */
+  height: 30px;
+  display: inline-block;
+  text-align: left;
+  line-height: 30px;
+  white-space: nowrap;
+  width: auto; /* Allow it to resize naturally */
+  min-width: fit-content; /* Only as wide as needed */
 }
 
 /* Rotating text element */
 .rotating-text span {
-  display: block;
+  display: inline-block; /* Ensures text stays inline */
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Ensure text spans take full width */
-  text-align: left; /* Align text properly */
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  white-space: nowrap; /* Prevent text from breaking */
+  white-space: nowrap;
 }
 
+/* Make first visible */
 .rotating-text span.active {
   opacity: 1;
+  position: relative; /* Prevent stacking issues */
 }
 
 /* portfolio */
