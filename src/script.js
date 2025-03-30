@@ -1,19 +1,3 @@
-// Word annimation
-
-document.addEventListener("DOMContentLoaded", function () {
-  const phrases = document.querySelectorAll(".rotating-text span");
-  let currentIndex = 0;
-
-  function rotateText() {
-    console.log("Rotating text..."); // Debugging
-    phrases[currentIndex].classList.remove("active");
-    currentIndex = (currentIndex + 1) % phrases.length;
-    phrases[currentIndex].classList.add("active");
-  }
-
-  setInterval(rotateText, 2000);
-});
-
 // fade in up, right, left
 
 const elementsToAnimate = document.querySelectorAll(".a-right, .a-left, .a-up");
