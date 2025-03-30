@@ -156,7 +156,6 @@
 
 /* contact */
 /* form */
-/* Form container */
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -165,7 +164,6 @@ form {
   border-radius: 10px; /* Rounded container */
 }
 
-/* Style input fields */
 input,
 textarea,
 select {
@@ -179,13 +177,11 @@ select {
   margin-bottom: 15px;
 }
 
-/* Larger text area */
 textarea {
   height: 120px;
   resize: none;
 }
 
-/* Submit button */
 button {
   width: 150px;
   padding: 10px;
@@ -202,7 +198,6 @@ button:hover {
   color: white;
 }
 
-/* Checkbox container */
 .checkbox-group {
   display: flex;
   align-items: center;
@@ -210,7 +205,6 @@ button:hover {
   margin-bottom: 10px; /* Space between checkboxes */
 }
 
-/* Style checkboxes */
 input[type="checkbox"] {
   width: 18px;
   height: 18px;
