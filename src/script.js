@@ -85,5 +85,5 @@ document.addEventListener("DOMContentLoaded", function () {
     phrases[currentIndex].classList.add("active");
   }
 
-  setInterval(rotateText, 2000);
+  setInterval(rotateText, 3000);
 });
