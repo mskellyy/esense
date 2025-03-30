@@ -68,22 +68,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Word animation
 document.addEventListener("DOMContentLoaded", function () {
-  const phrases = document.querySelectorAll(".rotating-text span");
-  let currentIndex = 0;
+  const phrases = [
+    "work harder than you do.",
+    "feel like home to the right people.",
+    "speak before you say a word.",
+    "make sense.",
+  ];
 
-  if (phrases.length === 0) {
-    console.error("No rotating text found! Check your HTML structure.");
-    return; // Stop execution if no elements found
+  let textElement = document.querySelector(".typing-text");
+  let cursor = document.querySelector(".cursor");
+  let index = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    let currentPhrase = phrases[index];
+
+    if (isDeleting) {
+      textElement.textContent = currentPhrase.substring(0, charIndex--);
+    } else {
+      textElement.textContent = currentPhrase.substring(0, charIndex++);
+    }
+
+    if (!isDeleting && charIndex === currentPhrase.length + 1) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000); // Pause before deleting
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      index = (index + 1) % phrases.length; // Move to the next phrase
+      setTimeout(typeEffect, 500); // Pause before typing the next phrase
+    } else {
+      setTimeout(typeEffect, isDeleting ? 50 : 100); // Typing & deleting speed
+    }
   }
 
-  phrases[currentIndex].classList.add("active"); // Ensure first phrase is visible
-
-  function rotateText() {
-    console.log("Rotating text..."); // Debugging
-    phrases[currentIndex].classList.remove("active");
-    currentIndex = (currentIndex + 1) % phrases.length;
-    phrases[currentIndex].classList.add("active");
-  }
-
-  setInterval(rotateText, 3000);
+  typeEffect();
 });

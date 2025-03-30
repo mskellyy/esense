@@ -55,51 +55,47 @@
 
 /* about */
 
+/* Centering everything */
 .brand-message-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px; /* Adjust based on your layout */
-  background-color: #f8f8f8; /* Optional background */
-  padding: 20px;
+  flex-direction: column;
+  height: 300px;
+  background-color: #f8f8f8;
+  text-align: center;
 }
 
-.text-container {
-  font-size: 15px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-
+/* Styling the static text */
 .static-text {
-  margin-right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.rotating-text {
-  position: relative;
-  overflow: hidden;
-  height: 30px;
+/* Container for the typing effect */
+.typing-container {
+  font-size: 24px;
+  font-weight: bold;
   display: inline-block;
-  text-align: left;
-  line-height: 30px;
   white-space: nowrap;
-  width: auto; /* Allow it to resize naturally */
-  min-width: fit-content; /* Only as wide as needed */
+  overflow: hidden;
+  border-right: 2px solid transparent; /* Prevents layout shift */
 }
 
-/* Rotating text element */
-.rotating-text span {
-  display: inline-block; /* Ensures text stays inline */
-  position: absolute;
-  opacity: 0;
-
-  white-space: nowrap;
+/* Blinking cursor */
+.cursor {
+  font-weight: bold;
+  font-size: 24px;
+  display: inline-block;
+  color: black;
+  animation: blink 0.8s infinite;
 }
 
-/* Make first visible */
-.rotating-text span.active {
-  opacity: 1;
-  position: relative; /* Prevent stacking issues */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* portfolio */
