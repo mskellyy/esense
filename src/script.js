@@ -65,3 +65,25 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+// Word animation
+document.addEventListener("DOMContentLoaded", function () {
+  const phrases = document.querySelectorAll(".rotating-text span");
+  let currentIndex = 0;
+
+  if (phrases.length === 0) {
+    console.error("No rotating text found! Check your HTML structure.");
+    return; // Stop execution if no elements found
+  }
+
+  phrases[currentIndex].classList.add("active"); // Ensure first phrase is visible
+
+  function rotateText() {
+    console.log("Rotating text..."); // Debugging
+    phrases[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % phrases.length;
+    phrases[currentIndex].classList.add("active");
+  }
+
+  setInterval(rotateText, 2000);
+});
