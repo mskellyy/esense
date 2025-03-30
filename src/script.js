@@ -50,19 +50,15 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://script.google.com/macros/s/AKfycbyuGVX4-qEDjsTXuXWuPhZ-wAS_j-PeEkprTiMGcIWaaWpf8gLzQVoXCxT4w-azH3sUfQ/exec",
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        mode: "no-cors", // This prevents the browser from blocking the request
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       }
     )
-      .then((response) => response.text())
-      .then((result) => {
-        alert("Form submitted successfully!");
-        form.reset();
-      })
-      .catch((error) => {
-        console.error("Error submitting form:", error);
-        alert("Something went wrong. Please try again.");
-      });
+      .then((response) => console.log("Form submitted successfully"))
+      .catch((error) => console.error("Error:", error));
   });
 });
 
