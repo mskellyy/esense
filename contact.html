@@ -20,7 +20,7 @@
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="/index.html">
-          <img src="logo.png" alt="EsenseStudio" />
+          <img src="/img/logo.png" alt="EsenseStudio" />
           <!-- Replace with your logo -->
         </a>
 
@@ -195,5 +195,57 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!--JS FOR FORM-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contactForm");
+
+        if (!form) return; // Prevent errors if the form doesn't exist
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const formData = new FormData(form);
+          let selectedServices = [];
+
+          form
+            .querySelectorAll("input[name='services']:checked")
+            .forEach((checkbox) => {
+              selectedServices.push(checkbox.value);
+            });
+
+          const data = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            brandName: formData.get("brandName"),
+            website: formData.get("website"),
+            referral: formData.get("referral"),
+            services: selectedServices,
+            vision: formData.get("vision"),
+            budget: formData.get("budget"),
+            launchDate: formData.get("launchDate"),
+            whyUs: formData.get("whyUs"),
+          };
+
+          fetch(
+            "https://script.google.com/macros/s/AKfycbyuGVX4-qEDjsTXuXWuPhZ-wAS_j-PeEkprTiMGcIWaaWpf8gLzQVoXCxT4w-azH3sUfQ/exec",
+            {
+              method: "POST",
+              mode: "no-cors", // Prevents CORS errors
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data), // Fix: Convert the data object, NOT formData
+            }
+          )
+            .then(() => {
+              console.log("Form submitted successfully");
+              alert("Thank you! Your submission has been received.");
+              form.reset(); // Clears the form after submission
+            })
+            .catch((error) => console.error("Error:", error));
+        });
+      });
+    </script>
   </body>
 </html>
