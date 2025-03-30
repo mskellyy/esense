@@ -74,18 +74,18 @@
     <form id="contactForm">
       <label for="name">Your Name *</label>
       <input type="text" id="name" name="name" required />
-      <br />
+
       <label for="email">Email *</label>
       <input type="email" id="email" name="email" required />
-      <br />
+
       <label for="brandName">Brand Name *</label>
       <input type="text" id="brandName" name="brandName" required />
-      <br />
+
       <label for="website"
         >Current Website / Instagram Handle (if available)</label
       >
       <input type="text" id="website" name="website" />
-      <br />
+
       <label for="referral">How did you find us? *</label>
       <select id="referral" name="referral" required>
         <option value="">Select an option</option>
@@ -94,86 +94,96 @@
         <option value="Google">Google Search</option>
         <option value="Other">Other</option>
       </select>
-      <br />
+
       <label
         >Services you are interested in. You can choose more than one core
         service. *</label
       >
-      <div>
-        <input
-          title="Brand Audit"
-          type="checkbox"
-          name="services"
-          value="Brand Audit"
-        />
-        Brand Audit<br />
-        <input
-          title="Brand Identity"
-          type="checkbox"
-          name="services"
-          value="Brand Identity"
-        />
-        Brand Identity<br />
-        <input
-          title="Packaging Design"
-          type="checkbox"
-          name="services"
-          value="Packaging Design"
-        />
-        Packaging Design<br />
-        <input
-          title="Print Collateral"
-          type="checkbox"
-          name="services"
-          value="Print Collateral"
-        />
-        Print Collateral<br />
-        <input
-          title="Digital Assets"
-          type="checkbox"
-          name="services"
-          value="Digital Assets"
-        />
-        Digital Assets<br />
-        <input
-          title="Website"
-          type="checkbox"
-          name="services"
-          value="Website"
-        />
-        Website<br />
-        <input title="Other" type="checkbox" name="services" value="Other" />
-        Other<br />
+      <div class="checkbox-container">
+        <div class="checkbox-group">
+          <input
+            type="checkbox"
+            id="brandAudit"
+            name="services"
+            value="Brand Audit"
+          />
+          <label for="brandAudit">Brand Audit</label>
+        </div>
+        <div class="checkbox-group">
+          <input
+            type="checkbox"
+            id="brandIdentity"
+            name="services"
+            value="Brand Identity"
+          />
+          <label for="brandIdentity">Brand Identity</label>
+        </div>
+        <div class="checkbox-group">
+          <input
+            type="checkbox"
+            id="packagingDesign"
+            name="services"
+            value="Packaging Design"
+          />
+          <label for="packagingDesign">Packaging Design</label>
+        </div>
+        <div class="checkbox-group">
+          <input
+            type="checkbox"
+            id="printCollateral"
+            name="services"
+            value="Print Collateral"
+          />
+          <label for="printCollateral">Print Collateral</label>
+        </div>
+        <div class="checkbox-group">
+          <input
+            type="checkbox"
+            id="digitalAssets"
+            name="services"
+            value="Digital Assets"
+          />
+          <label for="digitalAssets">Digital Assets</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="website" name="services" value="Website" />
+          <label for="website">Website</label>
+        </div>
+        <div class="checkbox-group">
+          <input
+            type="checkbox"
+            id="otherService"
+            name="services"
+            value="Other"
+          />
+          <label for="otherService">Other</label>
+        </div>
       </div>
 
       <label for="vision"
         >Tell us a bit about your business and your vision for this project!
         *</label
       >
-      <br />
       <textarea id="vision" name="vision" required></textarea>
-      <br />
+
       <label for="budget"
         >Do you have a budget in mind for this project? *</label
       >
-      <br />
       <select id="budget" name="budget" required>
         <option value="">Select a range</option>
         <option value="1000-3000">$1000 - $3000</option>
         <option value="3000-6000">$3000 - $6000</option>
         <option value="6000+">$6000+</option>
       </select>
-      <br />
+
       <label for="launchDate"
         >Do you have a specific date that you would like to launch by?</label
       >
-      <br />
       <input type="date" id="launchDate" name="launchDate" />
-      <br />
+
       <label for="whyUs">Why do you want to work with us specifically? *</label>
-      <br />
       <textarea id="whyUs" name="whyUs" required></textarea>
-      <br />
+
       <button type="submit">Submit</button>
     </form>
 
