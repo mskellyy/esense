@@ -292,6 +292,14 @@ a button {
   display: block; /* Removes flex behavior that might be affecting alignment */
 }
 
+.port-title h3 {
+  font-weight: 200;
+  font-size: 14px;
+  text-align: left;
+  font-family: var(--normal);
+  margin-left: 60px;
+}
+
 .review-section h1 {
   font-family: var(--heading);
   display: block;
@@ -632,6 +640,10 @@ footer {
     margin-left: 20px;
     font-size: 25px;
     margin-bottom: 50px;
+  }
+
+  .port-title h3 {
+    margin-left: 20px;
   }
 
   .work-grid {
