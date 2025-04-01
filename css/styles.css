@@ -554,6 +554,10 @@ footer {
   font-size: 15px;
 }
 
+.sm-none {
+  display: none;
+}
+
 @media (max-width: 1100px) {
   .hero-message h2 {
     font-size: 15px;
@@ -589,6 +593,10 @@ footer {
 
   .reviews h6 {
     font-size: 11px;
+  }
+
+  .review-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .about-section h1 {
