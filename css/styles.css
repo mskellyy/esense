@@ -54,7 +54,7 @@
 :root {
   --heading: "Spectral", serif;
   --beige: #f5f4ef;
-  --border:  border: 1px solid black;
+  --border: 1px solid black;
 }
 
 body {
@@ -66,7 +66,6 @@ body {
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  
 }
 
 .hero-message h2 {
@@ -78,8 +77,8 @@ body {
 }
 
 .hero-message {
-    padding-bottom: 20px;
-     align-content: center;
+  padding-bottom: 20px;
+  align-content: center;
 }
 
 .hero-message button {
@@ -104,7 +103,7 @@ body {
   max-width: 400px;
   display: block;
   margin: 0 auto;
- align-content: center;
+  align-content: center;
 }
 
 .hero-2 {
@@ -215,6 +214,7 @@ body {
 
 .about-section h1 {
   text-align: left;
+  font-family: var(--heading);
   margin-left: 30px;
   margin-right: 30px;
   line-height: 0.8;
@@ -255,34 +255,69 @@ body {
 
 a button {
   width: 200px;
- font-style: italic;
+  font-style: italic;
   font-size: 15px;
   font-family: var(--heading);
   display: block;
   margin: 0 auto;
-   margin-top: 70px;
+  margin-top: 70px;
 }
 
 /* portfolio */
 
-h1 {
+.port-hero h1 {
+  font-family: var(--normal);
+  text-align: left;
+  font-size: 40px;
+  margin-left: 100px;
+  padding-top: 20px;
+  font-weight: 200;
+  margin-bottom: 100px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  column-gap: 10px;
+  margin: 0 auto;
+}
+
+.work-pics {
+  width: 80%;
+  border: var(--border);
+  margin: 0 auto;
+  display: flex;
+}
+
+.review-section h1 {
   font-family: var(--heading);
   display: block;
   margin: 0 auto;
   text-align: center;
+  font-size: 70;
+}
+
+.review-section {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 80px;
 }
 .review-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
   padding: 40px;
-    justify-content: center;  
+  justify-content: center;
 }
 
 .reviews {
-  width: 300px;
+  width: 100%;
   justify-self: center;
+
   text-align: center;
+  padding: 20px;
 }
 
 .reviews h2 {
@@ -292,9 +327,9 @@ h1 {
 }
 
 .reviews h3 {
-  font-family: var(--heading);
+  font-family: var(--normal);
   font-weight: 200;
-  font-size: 15px;
+  font-size: 13px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -309,7 +344,6 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 20px;
   align-content: center;
- 
 }
 
 .package h1 {
@@ -334,9 +368,7 @@ h1 {
 }
 
 .package {
-
   padding: 20px;
-
 }
 
 .add-on-grid {
@@ -427,13 +459,11 @@ h1 {
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
 }
 
 .contact-img-right {
   justify-self: end;
   margin-left: 100px;
- 
 }
 
 .contact-pic {
@@ -453,7 +483,6 @@ form {
   padding: 20px;
   background-color: var(--beige); /* Soft beige background */
   border-radius: 10px; /* Rounded container */
-
 }
 
 input,
@@ -466,7 +495,7 @@ select {
   background: transparent;
   font-size: 16px;
   font-weight: 200;
-  
+
   outline: none;
   margin-bottom: 15px;
 }
@@ -525,6 +554,16 @@ footer {
   font-size: 15px;
 }
 
+@media (max-width: 1100px) {
+  .hero-message h2 {
+    font-size: 15px;
+  }
+
+  .hero h2 {
+    font-size: 17px;
+  }
+}
+
 /* iphone */
 @media (max-width: 600px) {
   .hero-message h2 {
@@ -536,7 +575,23 @@ footer {
     padding-bottom: 20px;
   }
 
-  .review-grid {
+  .reviews h2 {
+    font-size: 16px;
+  }
+
+  .reviews h3 {
+    font-size: 11px;
+  }
+
+  .reviews-section {
+    width: 95%;
+  }
+
+  .reviews h6 {
+    font-size: 11px;
+  }
+
+  .word-grid {
     grid-template-columns: 1fr;
   }
 
@@ -608,7 +663,6 @@ footer {
     padding: 20px;
   }
 
-
   .process-section {
     padding: 30px;
   }
@@ -631,6 +685,5 @@ footer {
 
   .contact-pic {
     width: 90%;
-  
   }
 }
