@@ -436,6 +436,10 @@ h1 {
  
 }
 
+.contact-pic {
+  border-radius: 10px;
+}
+
 /* form */
 
 .form-grid {
@@ -623,5 +627,10 @@ footer {
 
   .typing-container {
     width: 350px;
+  }
+
+  .contact-pic {
+    width: 90%;
+  
   }
 }
