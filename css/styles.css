@@ -395,6 +395,25 @@ a button {
   grid-template-columns: 1fr 1fr;
 }
 
+.port-banner {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically if there's height */
+  width: 100%; /* Ensures full width */
+  padding: 30px;
+  gap: 10px;
+}
+
+.port-banner .work-pics {
+  width: 20%;
+  display: block; /* Prevents inline-block spacing issues */
+}
+
+.port-banner h1 {
+  font-family: var(--heading);
+  font-style: italic;
+}
+
 .featured-section {
   margin-top: 50px;
 }
