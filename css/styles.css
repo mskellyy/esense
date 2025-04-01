@@ -353,6 +353,7 @@ a button {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 20px;
+  gap: 14px;
   justify-self: center;
   width: 70%;
 }
@@ -386,6 +387,7 @@ a button {
 
 .package {
   padding: 20px;
+  border: var(--border);
 }
 
 .add-on-grid {
@@ -398,8 +400,9 @@ a button {
 }
 
 .featured-section h6 {
-  text-align: left;
-  padding: 90px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: italic;
 }
 
 .featured {
@@ -410,6 +413,7 @@ a button {
   padding: 20px;
   width: 90%;
   justify-self: center;
+  border: var(--border);
 }
 
 .featured h1 {
