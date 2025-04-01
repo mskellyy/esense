@@ -403,7 +403,7 @@ footer {
   .brand-message-section {
     min-height: auto; /* Allows height to adjust based on content */
     padding: 40px 20px; /* More padding for better spacing */
-    width: 550px;
+    width: 400px;
   }
 
   .static-text {
@@ -423,7 +423,8 @@ footer {
   }
 
   .about-section h1 {
-    width: 500px;
+    width: 400px;
+    font-size: 22px;
   }
 
   .about-grid-top {
@@ -431,18 +432,20 @@ footer {
   }
 
   .about-section article {
-    width: 500px;
+    width: 400px;
     margin-left: 20px;
+    font-size: 12px;
   }
 
   .about-img {
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: 150px;
   }
 
   .about-section h2 {
     width: 400px;
-    margin-left: 30px;
+    margin-left: 20px;
+    font-size: 30px;
   }
 
   .about-section-bottom {
@@ -451,12 +454,12 @@ footer {
   }
 
   .about-section-bottom article {
-    margin-right: 0px;
-    padding-left: 0px;
+    width: 400px;
+    padding-left: 0;
   }
 
   .about-section-bottom h2 {
-    margin-left: 100px;
     margin-bottom: 0;
+    font-size: 20px;
   }
 }
