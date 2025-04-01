@@ -353,7 +353,8 @@ a button {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 20px;
-  align-content: center;
+  justify-self: center;
+  width: 70%;
 }
 
 .package h1 {
@@ -398,14 +399,17 @@ a button {
 
 .featured-section h6 {
   text-align: left;
-  padding: 20px;
+  padding: 90px;
 }
 
 .featured {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 30px;
+  gap: 10px;
+  margin-bottom: 60px;
   padding: 20px;
+  width: 90%;
+  justify-self: center;
 }
 
 .featured h1 {
