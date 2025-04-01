@@ -150,6 +150,44 @@ body {
 }
 
 /* portfolio */
+
+h1 {
+  font-family: var(--heading);
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.reviews {
+  width: 300px;
+  justify-self: center;
+  text-align: center;
+}
+
+.reviews h2 {
+  font-family: var(--heading);
+  font-style: italic;
+  font-size: 22px;
+}
+
+.reviews h3 {
+  font-family: var(--heading);
+  font-weight: 200;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.reviews h6 {
+  font-weight: 200;
+  font-size: 13px;
+}
+
 /* services */
 .service-packages {
   display: grid;
