@@ -229,11 +229,14 @@
             whyUs: formData.get("whyUs"),
           };
 
-          fetch("YOUR_DEPLOYED_SCRIPT_URL_HERE", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data), // Send data in correct format
-          })
+          fetch(
+            "https://script.google.com/macros/s/AKfycbxaLJ918OHxuRIwJg_eA3B4RK4KvD0Qq4JMTZoitUbq8rUX03IoKE_Cqx7cLfJrX7_6/exec",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(data), // Send data in correct format
+            }
+          )
             .then((response) => response.text())
             .then((result) => {
               console.log("Form submitted successfully:", result);
