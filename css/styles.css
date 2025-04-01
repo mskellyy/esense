@@ -54,6 +54,7 @@
 :root {
   --heading: "Spectral", serif;
   --beige: #f5f4ef;
+  --border:  border: 1px solid black;
 }
 
 body {
@@ -151,7 +152,7 @@ body {
   font-style: italic;
   display: block; /* Ensure full width */
   text-align: center;
-  max-width: 90%; /* Prevents text from touching the edges */
+  max-width: 100%; /* Prevents text from touching the edges */
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid transparent;
@@ -218,6 +219,10 @@ body {
 
 .about-section-bottom h2 {
   font-size: 25px;
+}
+
+.about-img-bottom {
+  margin-top: 60px;
 }
 
 /* portfolio */
@@ -329,13 +334,54 @@ h1 {
 }
 
 /* contact */
+.contact-section h1 {
+  font-family: var(--heading);
+  font-weight: 200;
+  font-style: italic;
+  font-size: 45px;
+}
+
+.contact-section p {
+  font-size: 14px;
+  font-family: var(--normal);
+  font-weight: 200;
+  width: 400px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.contact-img-right {
+  justify-self: end;
+  margin-left: 100px;
+ 
+}
+
 /* form */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 form {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f5efe2; /* Soft beige background */
+  background-color: var(--beige); /* Soft beige background */
   border-radius: 10px; /* Rounded container */
+
 }
 
 input,
@@ -449,6 +495,11 @@ footer {
   .about-section-bottom h2 {
     margin-bottom: 0;
     font-size: 20px;
+  }
+
+  .about-img-bottom {
+    padding-top: 20px;
+    width: 80%;
   }
 
   .laptop-pic {
