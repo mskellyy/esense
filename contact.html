@@ -202,7 +202,10 @@
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("contactForm");
 
-        if (!form) return; // Prevents errors if the form is missing
+        if (!form) {
+          console.error("Error: Form with ID 'contactForm' not found.");
+          return; // Stop execution if the form doesn't exist
+        }
 
         form.addEventListener("submit", function (event) {
           event.preventDefault();
@@ -233,13 +236,15 @@
             "https://script.google.com/macros/s/AKfycbxaLJ918OHxuRIwJg_eA3B4RK4KvD0Qq4JMTZoitUbq8rUX03IoKE_Cqx7cLfJrX7_6/exec",
             {
               method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(data), // Send data in correct format
+              mode: "no-cors", // Prevents CORS errors
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data), // Convert the data object to JSON
             }
           )
-            .then((response) => response.text())
-            .then((result) => {
-              console.log("Form submitted successfully:", result);
+            .then(() => {
+              console.log("Form submitted successfully");
               alert("Thank you! Your submission has been received.");
               form.reset(); // Clears the form after submission
             })
