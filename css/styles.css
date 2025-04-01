@@ -307,12 +307,14 @@ h1 {
 .service-packages {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
   margin-bottom: 20px;
+  align-content: center;
+ 
 }
 
 .package h1 {
   font-family: var(--heading);
+  font-size: 24px;
 }
 
 .package h4 {
@@ -328,6 +330,13 @@ h1 {
 
 .package p {
   font-weight: 200;
+  font-size: 14px;
+}
+
+.package {
+
+  padding: 20px;
+
 }
 
 .add-on-grid {
