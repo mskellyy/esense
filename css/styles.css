@@ -327,3 +327,10 @@ footer {
   color: black !important;
   font-size: 15px;
 }
+
+/* iphone */
+@media (max-width: 600px) {
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+}
