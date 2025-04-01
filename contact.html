@@ -203,11 +203,15 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("contactForm");
+        const submitButton = document.getElementById("submitButton"); // Ensure your submit button has an ID
 
-        if (!form) return; // Prevents errors if the form isn't found
+        if (!form) return; // Prevent errors if the form isn't found
 
         form.addEventListener("submit", function (event) {
           event.preventDefault();
+
+          submitButton.disabled = true; // Disable the button to prevent multiple clicks
+          submitButton.textContent = "Sending...";
 
           const formData = new FormData(form);
           let selectedServices = [];
@@ -230,7 +234,7 @@
           };
 
           fetch(
-            "https://script.google.com/macros/s/AKfycbwZCAmerBcKGSykXUcNGnjmsULC04SuvA4fxiTVZoZnlSbLjbOmatlckjG-ofeNWfNn/exec",
+            "https://script.google.com/macros/s/AKfycbxR4LkiisNPXe6uYvFJ1IZymXoUPCzQEB5XNAG_g9PKgUuFfh2MYp-RJTG_u-sbbTeK/exec",
             {
               method: "POST",
               headers: {
@@ -239,7 +243,7 @@
               body: JSON.stringify(data),
             }
           )
-            .then((response) => response.json()) // Parse JSON response
+            .then((response) => response.json()) // Convert response to JSON
             .then((data) => {
               if (data.status === "success") {
                 alert("Thank you! Your submission has been received.");
@@ -251,6 +255,10 @@
             .catch((error) => {
               console.error("Error:", error);
               alert("Something went wrong. Please try again.");
+            })
+            .finally(() => {
+              submitButton.disabled = false; // Re-enable button
+              submitButton.textContent = "Submit";
             });
         });
       });
