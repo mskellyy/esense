@@ -351,6 +351,12 @@ a button {
 .package h1 {
   font-family: var(--heading);
   font-size: 24px;
+  font-style: italic;
+}
+
+.package h6 {
+  font-family: var(--heading);
+  font-size: 30px;
 }
 
 .package h4 {
@@ -382,14 +388,22 @@ a button {
   margin-top: 50px;
 }
 
+.featured-section h6 {
+  text-align: left;
+  padding: 20px;
+}
+
 .featured {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 30px;
+  padding: 20px;
 }
 
 .featured h1 {
   font-family: var(--heading);
+  font-size: 23px;
+  font-style: italic;
 }
 
 .featured h2 {
@@ -400,19 +414,19 @@ a button {
 }
 
 .featured h3 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 200;
 }
 
 .featured h4 {
-  font-size: 17px;
+  font-size: 15px;
   font-family: var(--heading);
   font-weight: 300;
 }
 
 .featured p {
   font-weight: 200;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .process-section {
@@ -564,6 +578,10 @@ footer {
   .hero h2 {
     font-size: 17px;
   }
+
+  .hero-pic-top {
+    height: 400px;
+  }
 }
 
 /* iphone */
@@ -578,6 +596,10 @@ footer {
 
   .hero {
     padding-bottom: 20px;
+  }
+
+  .hero-pic-top {
+    height: auto;
   }
 
   .reviews h2 {
