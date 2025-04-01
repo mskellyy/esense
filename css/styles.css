@@ -399,23 +399,6 @@ footer {
   font-size: 15px;
 }
 
-@media (max-width: 768px) {
-  .brand-message-section {
-    min-height: auto; /* Allows height to adjust based on content */
-    padding: 40px 20px; /* More padding for better spacing */
-    width: 350px;
-  }
-
-  .static-text {
-    font-size: 24px; /* Reduce font size */
-  }
-
-  .typing-container {
-    font-size: 22px;
-    max-width: 100%; /* Ensures it fits within the container */
-  }
-}
-
 /* iphone */
 @media (max-width: 600px) {
   .hero-message h2 {
@@ -488,5 +471,21 @@ footer {
   .featured {
     grid-template-columns: 1fr;
     padding: 20px;
+  }
+
+  .brand-message-section {
+    padding: 20px;
+  }
+
+  .static-text {
+    font-size: 25px;
+  }
+
+  .typing-text {
+    font-size: 22px;
+  }
+
+  .typing-container {
+    width: 350px;
   }
 }
