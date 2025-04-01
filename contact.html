@@ -210,7 +210,7 @@
         form.addEventListener("submit", function (event) {
           event.preventDefault();
 
-          submitButton.disabled = true; // Disable the button to prevent multiple clicks
+          submitButton.disabled = false; // Disable the button to prevent multiple clicks
           submitButton.textContent = "Sending...";
 
           const formData = new FormData(form);
