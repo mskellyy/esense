@@ -403,6 +403,7 @@ footer {
   .brand-message-section {
     min-height: auto; /* Allows height to adjust based on content */
     padding: 40px 20px; /* More padding for better spacing */
+    width: 550px;
   }
 
   .static-text {
