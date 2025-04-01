@@ -66,16 +66,40 @@ body {
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 50px;
+  
 }
 
 .hero-message h2 {
   font-family: var(--heading);
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 200;
   text-align: center;
   padding: 30px;
+color: white;
+text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+  
 }
+
+.hero-message {
+  background-image: url("/img/girl.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* This makes it stay in place */
+    padding-bottom: 20px;
+}
+
+.hero-message button {
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  font-family: var(--normal);
+  font-weight: 200;
+  color: white;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+  font-size: 20px;
+
+}
+
 .hero {
   text-align: center;
   max-width: 400px;
@@ -331,6 +355,10 @@ h1 {
 .featured p {
   font-weight: 200;
   font-size: 15px;
+}
+
+.process-section {
+  background-image: url(img/process.jpg);
 }
 
 /* contact */
