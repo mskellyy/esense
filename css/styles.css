@@ -127,7 +127,7 @@ body {
   min-height: 300px;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #f8f8f8;
+  background-color: var(--beige);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -403,7 +403,7 @@ footer {
   .brand-message-section {
     min-height: auto; /* Allows height to adjust based on content */
     padding: 40px 20px; /* More padding for better spacing */
-    width: 400px;
+    width: 350px;
   }
 
   .static-text {
@@ -418,12 +418,17 @@ footer {
 
 /* iphone */
 @media (max-width: 600px) {
+  .hero-message h2 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
   .review-grid {
     grid-template-columns: 1fr;
   }
 
   .about-section h1 {
-    width: 400px;
+    width: 350px;
     font-size: 22px;
   }
 
@@ -432,18 +437,18 @@ footer {
   }
 
   .about-section article {
-    width: 400px;
+    width: 350px;
     margin-left: 20px;
     font-size: 12px;
   }
 
   .about-img {
     margin-top: 20px;
-    margin-left: 150px;
+    margin-left: 130px;
   }
 
   .about-section h2 {
-    width: 400px;
+    width: 350px;
     margin-left: 20px;
     font-size: 30px;
   }
@@ -461,5 +466,27 @@ footer {
   .about-section-bottom h2 {
     margin-bottom: 0;
     font-size: 20px;
+  }
+
+  .laptop-pic {
+    width: 300px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-2 {
+    padding-bottom: 20px;
+  }
+
+  .service-packages {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .featured {
+    grid-template-columns: 1fr;
+    padding: 20px;
   }
 }
