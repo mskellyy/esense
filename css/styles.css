@@ -218,3 +218,9 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
   padding: 20px;
 }
+
+.footer-left h2 {
+  font-weight: 200;
+  color: black !important;
+  font-size: 17px;
+}
