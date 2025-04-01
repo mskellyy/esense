@@ -188,8 +188,10 @@
     </form>
 
     <img src="/img/desk.jpg" alt="computer" width="30%" />
+    <!---
     <div data-tf-live="01JQQS0YTRHDAVKYXJWDB3K64C"></div>
     <script src="//embed.typeform.com/next/embed.js"></script>
+    -->
 
     <script src="/src/script.js"></script>
     <script
@@ -231,23 +233,18 @@
             launchDate: formData.get("launchDate"),
             whyUs: formData.get("whyUs"),
           };
-
           fetch(
             "https://script.google.com/macros/s/AKfycbxaLJ918OHxuRIwJg_eA3B4RK4KvD0Qq4JMTZoitUbq8rUX03IoKE_Cqx7cLfJrX7_6/exec",
             {
               method: "POST",
-              mode: "no-cors", // Prevents CORS errors
               headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify(data), // Convert the data object to JSON
+              body: JSON.stringify(data),
             }
           )
-            .then(() => {
-              console.log("Form submitted successfully");
-              alert("Thank you! Your submission has been received.");
-              form.reset(); // Clears the form after submission
-            })
+            .then((response) => response.json()) // Parse response
+            .then((data) => console.log("Success:", data))
             .catch((error) => console.error("Error:", error));
         });
       });
