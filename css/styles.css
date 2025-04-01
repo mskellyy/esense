@@ -591,13 +591,24 @@ footer {
     font-size: 11px;
   }
 
-  .word-grid {
-    grid-template-columns: 1fr;
-  }
-
   .about-section h1 {
     width: 350px;
     font-size: 22px;
+  }
+
+  .port-hero h1 {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+
+  .work-grid {
+    display: block;
+  }
+
+  .work-pics {
+    margin-bottom: 10px;
   }
 
   .about-grid-top {
