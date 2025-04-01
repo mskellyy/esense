@@ -204,10 +204,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("contactForm");
 
-        if (!form) {
-          console.error("Error: Form with ID 'contactForm' not found.");
-          return; // Stop execution if the form doesn't exist
-        }
+        if (!form) return; // Prevents errors if the form isn't found
 
         form.addEventListener("submit", function (event) {
           event.preventDefault();
@@ -217,9 +214,7 @@
 
           form
             .querySelectorAll("input[name='services']:checked")
-            .forEach((checkbox) => {
-              selectedServices.push(checkbox.value);
-            });
+            .forEach((checkbox) => selectedServices.push(checkbox.value));
 
           const data = {
             name: formData.get("name"),
@@ -233,8 +228,9 @@
             launchDate: formData.get("launchDate"),
             whyUs: formData.get("whyUs"),
           };
+
           fetch(
-            "https://script.google.com/macros/s/AKfycbxaLJ918OHxuRIwJg_eA3B4RK4KvD0Qq4JMTZoitUbq8rUX03IoKE_Cqx7cLfJrX7_6/exec",
+            "https://script.google.com/macros/s/AKfycbwZCAmerBcKGSykXUcNGnjmsULC04SuvA4fxiTVZoZnlSbLjbOmatlckjG-ofeNWfNn/exec",
             {
               method: "POST",
               headers: {
@@ -243,9 +239,19 @@
               body: JSON.stringify(data),
             }
           )
-            .then((response) => response.json()) // Parse response
-            .then((data) => console.log("Success:", data))
-            .catch((error) => console.error("Error:", error));
+            .then((response) => response.json()) // Parse JSON response
+            .then((data) => {
+              if (data.status === "success") {
+                alert("Thank you! Your submission has been received.");
+                form.reset(); // Clears the form after successful submission
+              } else {
+                alert("Error: " + data.message);
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              alert("Something went wrong. Please try again.");
+            });
         });
       });
     </script>
