@@ -75,128 +75,83 @@
     <img src="/img/contact.JPG" alt="computer" width="30%" class="contact-pic" />
     </div>
     <!--contact form-->
-    <form id="contactForm">
-      <label for="name">Your Name *</label>
-      <input type="text" id="name" name="name" required />
+  <form id="contactForm">
 
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" required />
+    <label for="name">Your Name *</label>
+    <input type="text" id="name" name="name" required />
 
-      <label for="brandName">Brand Name *</label>
-      <input type="text" id="brandName" name="brandName" required />
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required />
 
-      <label for="website"
-        >Current Website / Instagram Handle (if available)</label
-      >
-      <input type="text" id="website" name="website" />
+    <label for="brandName">Brand Name *</label>
+    <input type="text" id="brandName" name="brandName" required />
 
-      <label for="referral">How did you find us? *</label>
-      <select id="referral" name="referral" required>
+    <label for="website">Current Website / Instagram Handle (if available)</label>
+    <input type="text" id="website" name="website" />
+
+    <label for="referral">How did you find us? *</label>
+    <select id="referral" name="referral" required>
         <option value="">Select an option</option>
         <option value="Instagram">Instagram</option>
         <option value="Referral">Referral</option>
         <option value="Google">Google Search</option>
         <option value="Other">Other</option>
-      </select>
+    </select>
 
-      <label
-        >Services you are interested in. You can choose more than one core
-        service. *</label
-      >
-      <div class="checkbox-container">
+    <label>Services you are interested in. You can choose more than one core service. *</label>
+    <div class="checkbox-container">
         <div class="checkbox-group">
-          <input
-            type="checkbox"
-            id="brandAudit"
-            name="services"
-            value="Brand Audit"
-          />
-          <label for="brandAudit">Brand Audit</label>
+            <input type="checkbox" id="brandAudit" name="services" value="Brand Audit" />
+            <label for="brandAudit">Brand Audit</label>
         </div>
         <div class="checkbox-group">
-          <input
-            type="checkbox"
-            id="brandIdentity"
-            name="services"
-            value="Brand Identity"
-          />
-          <label for="brandIdentity">Brand Identity</label>
+            <input type="checkbox" id="brandIdentity" name="services" value="Brand Identity" />
+            <label for="brandIdentity">Brand Identity</label>
         </div>
         <div class="checkbox-group">
-          <input
-            type="checkbox"
-            id="packagingDesign"
-            name="services"
-            value="Packaging Design"
-          />
-          <label for="packagingDesign">Packaging Design</label>
+            <input type="checkbox" id="packagingDesign" name="services" value="Packaging Design" />
+            <label for="packagingDesign">Packaging Design</label>
         </div>
         <div class="checkbox-group">
-          <input
-            type="checkbox"
-            id="printCollateral"
-            name="services"
-            value="Print Collateral"
-          />
-          <label for="printCollateral">Print Collateral</label>
+            <input type="checkbox" id="printCollateral" name="services" value="Print Collateral" />
+            <label for="printCollateral">Print Collateral</label>
         </div>
         <div class="checkbox-group">
-          <input
-            type="checkbox"
-            id="digitalAssets"
-            name="services"
-            value="Digital Assets"
-          />
-          <label for="digitalAssets">Digital Assets</label>
+            <input type="checkbox" id="digitalAssets" name="services" value="Digital Assets" />
+            <label for="digitalAssets">Digital Assets</label>
         </div>
         <div class="checkbox-group">
-          <input type="checkbox" id="website" name="services" value="Website" />
-          <label for="website">Website</label>
+            <input type="checkbox" id="websiteCheckbox" name="services" value="Website" />
+            <label for="websiteCheckbox">Website</label>
         </div>
         <div class="checkbox-group">
-          <input
-            type="checkbox"
-            id="otherService"
-            name="services"
-            value="Other"
-          />
-          <label for="otherService">Other</label>
+            <input type="checkbox" id="otherService" name="services" value="Other" />
+            <label for="otherService">Other</label>
         </div>
-      </div>
+    </div>
 
-      <label for="vision"
-        >Tell us a bit about your business and your vision for this project!
-        *</label
-      >
-      <textarea id="vision" name="vision" required></textarea>
+    <label for="vision">Tell us a bit about your business and your vision for this project! *</label>
+    <textarea id="vision" name="vision" required></textarea>
 
-      <label for="budget"
-        >Do you have a budget in mind for this project? *</label
-      >
-      <select id="budget" name="budget" required>
+    <label for="budget">Do you have a budget in mind for this project? *</label>
+    <select id="budget" name="budget" required>
         <option value="">Select a range</option>
         <option value="1000-3000">$1000 - $3000</option>
         <option value="3000-6000">$3000 - $6000</option>
         <option value="6000+">$6000+</option>
-      </select>
+    </select>
 
-      <label for="launchDate"
-        >Do you have a specific date that you would like to launch by?</label
-      >
-      <input type="date" id="launchDate" name="launchDate" />
+    <label for="launchDate">Do you have a specific date that you would like to launch by?</label>
+    <input type="date" id="launchDate" name="launchDate" />
 
-      <label for="whyUs">Why do you want to work with us specifically? *</label>
-      <textarea id="whyUs" name="whyUs" required></textarea>
+    <label for="whyUs">Why do you want to work with us specifically? *</label>
+    <textarea id="whyUs" name="whyUs" required></textarea>
 
-      <button type="submit">Submit</button>
-    </form>
-
+    <button type="submit">Submit</button>
+    <div class="error" id="formError"></div>
+</form>
 
 
-    <!---
-    <div data-tf-live="01JQQS0YTRHDAVKYXJWDB3K64C"></div>
-    <script src="//embed.typeform.com/next/embed.js"></script>
-    -->
       <footer>
          <div class="footer-left">
        <a href="/about.html" rel="noopener noreferrer" class="text-decoration-none"><h2>ABOUT</h2></a>
